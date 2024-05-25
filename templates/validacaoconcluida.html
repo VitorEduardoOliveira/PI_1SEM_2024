@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/validacaoconcluida.css' %}" />
+
+    <title>Confirmação de validação</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="popup" id="popup">
+            <img src="{% static 'img/validacao-certinho.png'}" alt="">
+            <h2>MUITO OBRIGADO!!!</h2>
+            <p>Doação realizada com sucesso!</p>
+            <button type="button" onclick="redirect()">OK</button>
+        </div>        
+    </div>
+
+     <!-- custom js link -->
+	<script src="{% static 'js/validacaoconcluida.js' %}" defer></script>
+
+</body>
+</html>
+

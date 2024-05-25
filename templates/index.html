@@ -1,0 +1,695 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Alimenta Ação</title>
+      <!-- favicon -->
+      <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+      <!-- custom css link -->
+      <link rel="stylesheet" href="{% static 'css/index.css' %}">
+      <link rel="stylesheet" href="{% static 'css/resposivo.css' %}">
+      <!-- google font link -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
+         rel="stylesheet">
+      <!-- Link para a biblioteca de ícones Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   </head>
+   <body>
+      <!-- #HEADER -->
+      <header class="header" data-header>
+         <div class="container">
+            <h1>
+               <a href="#" class="logo">Alimenta Ação</a>
+            </h1>
+            <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+               <ion-icon name="menu-outline"></ion-icon>
+            </button>
+            <nav class="navbar" data-navbar>
+               <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+                  <ion-icon name="close-outline"></ion-icon>
+               </button>
+               <a href="#" class="logo">Alienta Ação</a>
+               <ul class="navbar-list">
+                  <li>
+                     <a href="#" class="navbar-link" data-nav-link>
+                        <span>Menu</span>
+                        <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+                     </a>
+                  </li>
+                  <li>
+                  <li>
+                     <a href="#" class="navbar-link" data-nav-link id="link-sobre">
+                        <span>Sobre</span>
+                        <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+                     </a>
+                  </li>                     
+                  </li>
+                  <li>
+                     <a href="#" class="navbar-link" data-nav-link id="link-servicos">
+                        <span>Serviços</span>
+                        <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+                     </a>
+                  </li>
+                  <li class="navbar-item has-submenu" data-nav-item> 
+                    <a href="#" class="navbar-link" data-nav-link>Páginas<i class="bi bi-caret-down-fill"></i></a>
+                    <ul class="submenu">
+                        <li class="dropdown-item"><a href="#" id="link-doar">Doar</a></li>
+                        <li class="dropdown-item"><a href="{% url 'core:nossotime' %}">Nosso time</a></li>
+                        <li class="dropdown-item"><a href="#" id="link-depoimentos">Depoimentos</a></li>
+                    </ul>
+                </li>
+                  <li>
+                     <a href="{% url 'core:contato' %}" class="navbar-link" data-nav-link>
+                        <span>Entre em contato</span>
+                        <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="header-action">
+               <button id="doarBtn" class="btn btn-primary">
+                   <span>Doe agora!</span>
+                   <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+               </button>
+           </div>
+         </div>
+      </header>
+      <!-- #HERO -->
+      <section class="hero" id="home">
+         <div class="container">
+            <p class="section-subtitle">
+               <img src="{% static 'img/subtitle-img-white.png' %}" width="32" height="7" alt="Wavy line">
+               <span>Bem vindo a Alimenta Ação</span>
+            </p>
+            <h2 class="h1 hero-title">
+               Vamos salvar o mundo<strong>com a humanidade</strong>
+            </h2>
+            <p class="hero-text">
+               Unidos, podemos transformar a luta contra a fome em uma realidade, garantindo que todos tenham acesso a
+               alimentos e a oportunidades para prosperar.
+            </p>
+            <button id="doarBtn2" class="btn btn-primary">
+               <span>Doe agora!</span>
+               <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+           </button>
+           
+         </div>
+      </section>
+      <!-- #ABOUT -->
+      <section class="section about" id="about">
+         <div class="container">
+            <div class="about-banner">
+               <h2 class="deco-title">Sobre nós</h2>
+               <img src="{% static 'img/deco-img.png' %}" width="58" height="261" alt="" class="deco-img">
+               <div class="banner-row">
+                  <div class="banner-col">
+                     <img src="{% static 'img/sobre-1.jpg' %}" alt=""
+                        class="about-img w-100">
+                     <img src="{% static 'img/sobre-2.jpg' %}" alt=""
+                        class="about-img about-img-2 w-100">
+                  </div>
+                  <div class="banner-col">
+                     <img src="{% static 'img/sobre-3.jpg' %}" alt=""
+                        class="about-img about-img-3 w-100">
+                     <img src="{% static 'img/sobre-4.jpg' %}" alt=""
+                        class="about-img w-100">
+                  </div>
+               </div>
+            </div>
+            <div class="about-content">
+               <p class="section-subtitle">
+                  <img src="{% static 'img/subtitle-img-green.png'%}" width="32" height="7" alt="Wavy line">
+                  <span>Porque escolher-nos</span>
+               </p>
+               <h2 class="h2 section-title">
+                  Nós salvamos<strong>vidas humanas</strong>
+               </h2>
+               <ul class="tab-nav">
+                  <li><button class="tab-btn" onclick="openTab('missao')">Missão</button></li>
+                  <li><button class="tab-btn" onclick="openTab('visao')">Visão</button></li>
+                  <li><button class="tab-btn" onclick="openTab('valores')">Valores</button></li>
+               </ul>
+               <p class="section-text" id="missaoText">
+                  Nosso propósito é fornecer suporte vital e recursos essenciais para comunidades em necessidade, promovendo a igualdade de oportunidades e o bem-estar para todos. Buscamos aliviar o sofrimento, fortalecer laços comunitários e inspirar a mudança positiva por meio de iniciativas de caridade eficazes e sustentáveis.
+               </p>
+               <p class="section-text" id="visaoText">
+                  Nosso sonho é construir um mundo onde todas as pessoas tenham acesso aos recursos necessários para uma vida digna e próspera. Visualizamos comunidades unidas, onde o amor ao próximo, a compaixão e a solidariedade são os alicerces de uma sociedade justa e inclusiva.
+               </p>
+               <p class="section-text" id="valoresText">
+                  Empatia <br>
+                  Transparência <br>
+                  Eficiência <br>
+                  Inovação <br>
+                  Responsabilidade <br>
+                  Colaboração
+               </p>
+               <ul class="tab-list">
+                  <li class="tab-item">
+                     <div class="item-icon">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                     </div>
+                     <p class="tab-text">Caridade para alimentos</p>
+                  </li>
+                  <li class="tab-item">
+                     <div class="item-icon">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                     </div>
+                     <p class="tab-text">Caridade para educação</p>
+                  </li>
+                  <li class="tab-item">
+                     <div class="item-icon">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                     </div>
+                     <p class="tab-text">Caridade pela água</p>
+                  </li>
+                  <li class="tab-item">
+                     <div class="item-icon">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                     </div>
+                     <p class="tab-text">Caridade para médicos</p>
+                  </li>
+               </ul>
+               <button class="btn btn-secondary">
+                  <span>Saiba mais sobre nós</span>
+                  <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+               </button>
+            </div>
+         </div>
+         </div>
+      </section>
+      <!-- #SERVICE -->
+      <section class="section service" id="service" style="background-image: url('../IMAGENS/service-map.png')">
+         <div class="container">
+            <p class="section-subtitle">
+               <img src="{% static 'img/subtitle-img-green.png' %}" width="32" height="7" alt="Wavy line">
+               <span>O que nós fazemos</span>
+            </p>
+            <h2 class="h2 section-title">
+               Trabalhamos de forma diferente para<strong>mantenha o mundo seguro</strong>
+            </h2>
+            <ul class="service-list">
+               <li>
+                  <div class="service-card">
+                     <div class="card-icon">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-1.png' %}" alt="">
+                     </div>
+                     <h3 class="h3 card-title">Educação Infantil</h3>
+                     <p class="card-text">
+                        Escreva um texto aqui
+                     </p>
+                     <a href="#" class="btn-link">
+                        <span>Saiba mais</span>
+                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                     </a>
+                  </div>
+               </li>
+               <li>
+                  <div class="service-card">
+                     <div class="card-icon">
+                        <ion-icon name="earth-outline"></ion-icon>
+                     </div>
+                     <h3 class="h3 card-title">Salvamos o mundo</h3>
+                     <p class="card-text">
+                        Escreva um texto aqui
+                     </p>
+                     <a href="#" class="btn-link">
+                        <span>Saiba mais</span>
+                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                     </a>
+                  </div>
+               </li>
+               <li>
+                  <div class="service-card">
+                     <div class="card-icon">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-2.png' %}" alt="">
+                     </div>
+                     <h3 class="h3 card-title">Tratamento médico</h3>
+                     <p class="card-text">
+                        escreva um texto aqui
+                     </p>
+                     <a href="#" class="btn-link">
+                        <span>Saiba mais</span>
+                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                     </a>
+                  </div>
+               </li>
+               <li>
+                  <div class="service-card">
+                     <div class="card-icon">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-3.png' %}" alt="">
+                     </div>
+                     <h3 class="h3 card-title">Água Potável Pura</h3>
+                     <p class="card-text">
+                        escreva um texto aqui
+                     </p>
+                     <a href="#" class="btn-link">
+                        <span>Saiba mais</span>
+                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                     </a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <!-- #DONATE -->
+      <section class="section donate" id="doacoes">
+         <div class="container">
+            <ul class="donate-list">
+               <li>
+                  <div class="donate-card">
+                     <figure class="card-banner">
+                        <img src="{% static 'img/ong-1.jpg' %}" width="520" height="325" loading="lazy" alt=""
+                           class="img-cover">
+                     </figure>
+                     <div class="card-content">
+                        <div class="progress-wrapper">
+                           <p class="progress-text">
+                              <span>Arrecadados</span>
+                              <data value="4650">R$4.650,00</data>
+                           </p>
+                           <data class="progress-value" value="93">93%</data>
+                        </div>
+                        <div class="progress-box">
+                           <div class="progress"></div>
+                        </div>
+                        <h3 class="h3 card-title">Salve o mundo</h3>
+                        <div class="card-wrapper">
+                           <p class="card-wrapper-text">
+                              <span>Meta</span>
+                              <data class="green" value="34562">R$ 6.250,00</data>
+                           </p>
+                        </div>
+                        <button class="btn btn-secondary" onclick="window.location='{% url 'core:doe' %}';">
+                           <span>Saiba mais!</span>
+                           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="donate-card">
+                     <figure class="card-banner">
+                        <img src="{% static 'img/ong-2.jpg' %}" width="520" height="325" loading="lazy" alt=""
+                           class="img-cover">
+                     </figure>
+                     <div class="card-content">
+                        <div class="progress-wrapper">
+                           <p class="progress-text">
+                              <span>Arrecadados</span>
+                              <data value="3420">R$3.420,00</data>
+                           </p>
+                           <data class="progress-value" value="76">76%</data>
+                        </div>
+                        <div class="progress-box">
+                           <div class="progress"></div>
+                        </div>
+                        <h3 class="h3 card-title">Salve o mundo</h3>
+                        <div class="card-wrapper">
+                           <p class="card-wrapper-text">
+                              <span>Meta</span>
+                              <data class="green" value="4500">R$ 4.500,00</data>
+                           </p>
+                        </div>
+                        <button class="btn btn-secondary" onclick="window.location='http://localhost:8000/doe';}">
+                           <span>Saiba mais!</span>
+                           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="donate-card">
+                     <figure class="card-banner">
+                        <img src="{% static 'img/ong-1.jpg' %}" width="520" height="325" loading="lazy" alt=""
+                           class="img-cover">
+                     </figure>
+                     <div class="card-content">
+                        <div class="progress-wrapper">
+                           <p class="progress-text">
+                              <span>Arrecadados</span>
+                              <data value="2537">R$2.537,50</data>
+                           </p>
+                           <data class="progress-value" value="35">35%</data>
+                        </div>
+                        <div class="progress-box">
+                           <div class="progress"></div>
+                        </div>
+                        <h3 class="h3 card-title">Salve o mundo</h3>
+                        <div class="card-wrapper">
+                           <p class="card-wrapper-text">
+                              <span>Meta</span>
+                              <data class="green" value="6250">R$ 7.250,00</data>
+                           </p>
+                        </div>
+                        <button class="btn btn-secondary" onclick="window.location='http://localhost:8000/doe';">
+                           <span>Saiba mais!</span>
+                           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="donate-card">
+                     <figure class="card-banner">
+                        <img src="{% static 'img/ong-2.jpg' %}" width="520" height="325" loading="lazy" alt=""
+                           class="img-cover">
+                     </figure>
+                     <div class="card-content">
+                        <div class="progress-wrapper">
+                           <p class="progress-text">
+                              <span>Arrecadados</span>
+                              <data value="3180">R$3.180,00</data>
+                           </p>
+                           <data class="progress-value" value="53">53%</data>
+                        </div>
+                        <div class="progress-box">
+                           <div class="progress"></div>
+                        </div>
+                        <h3 class="h3 card-title">Salve o mundo</h3>
+                        <div class="card-wrapper">
+                           <p class="card-wrapper-text">
+                              <span>Meta</span>
+                              <data class="green" value="6000">R$ 6.000,00</data>
+                           </p>
+                        </div>
+                        <button class="btn btn-secondary" onclick="window.location='http://localhost:8000/doe';">
+                           <span>Saiba mais!</span>
+                           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </section>
+
+      <!-- #TESTIMONIALS -->
+      <section id="testimonial">
+         <div class="testimonial-heading">
+            <span>Avaliações</span>
+            <h1>Feedback de Quem Confia em Nós</h1>
+         </div>         
+         <div class="testimonial-box-container">
+            <div class="testimonial-box">
+               <div class="box-top">
+                  <div class="profile">
+                     <div class="profile-img">
+                        <img src="{% static 'IMG/testemunha-01.jfif' %}" alt="">
+                     </div>
+                     <div class="name-user">
+                        <strong>Guilherme Sousa</strong>
+                        <span>@guilhermesousaweb</span>
+                     </div>
+                  </div>
+                  <div class="reviews">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+               </div>
+               <div class="client-comment">
+                  <p> Unidos, podemos transformar a luta contra a fome em uma realidade, garantindo que todos tenham
+                      acesso a alimentos e a oportunidades para prosperar.
+                  </p>
+               </div>
+            </div>
+            <div class="testimonial-box">
+               <div class="box-top">
+                  <div class="profile">
+                     <div class="profile-img">
+                        <img src="{% static 'img/testemunha-02.jpg' %}" alt="">
+                     </div>
+                     <div class="name-user">
+                        <strong>Ana Oliveira</strong>
+                        <span>@anaoliveiraweb</span>
+                     </div>
+                  </div>
+                  <div class="reviews">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </div>
+               </div>
+               <div class="client-comment">
+                  <p> Unidos, podemos transformar a luta contra a fome em uma realidade, garantindo que todos tenham
+                      acesso a alimentos e a oportunidades para prosperar.
+                  </p>
+               </div>
+            </div>
+            <div class="testimonial-box">
+               <div class="box-top">
+                  <div class="profile">
+                     <div class="profile-img">
+                        <img src="{% static 'img/testemunha-03.avif' %}" alt="">
+                     </div>
+                     <div class="name-user">
+                        <strong>Camilla Dias</strong>
+                        <span>@camilladiasweb</span>
+                     </div>
+                  </div>
+                  <div class="reviews">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                  </div>
+               </div>
+               <div class="client-comment">
+                  <p> Unidos, podemos transformar a luta contra a fome em uma realidade, garantindo que todos tenham
+                      acesso a alimentos e a oportunidades para prosperar.
+                  </p>
+               </div>
+            </div>
+            <div class="testimonial-box">
+               <div class="box-top">
+                  <div class="profile">
+                     <div class="profile-img">
+                        <img src="{% static 'img/testemunha-04.avif' %}" alt="">
+                     </div>
+                     <div class="name-user">
+                        <strong>Fernando Soares</strong>
+                        <span>@fernandosoaresweb</span>
+                     </div>
+                  </div>
+                  <div class="reviews">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+               </div>
+               <div class="client-comment">
+                  <p> Unidos, podemos transformar a luta contra a fome em uma realidade, garantindo que todos tenham
+                      acesso a alimentos e a oportunidades para prosperar.
+                  </p>
+               </div>
+            </div>
+            <div class="testimonial-box">
+               <div class="box-top">
+                  <div class="profile">
+                     <div class="profile-img">
+                        <img src="{% static 'img/testemunha-05.jfif' %}" alt="">
+                     </div>
+                     <div class="name-user">
+                        <strong>Victor Leme</strong>
+                        <span>@fernandosoaresweb</span>
+                     </div>
+                  </div>
+                  <div class="reviews">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+               </div>
+               <div class="client-comment">
+                  <p> Unidos, podemos transformar a luta contra a fome em uma realidade, garantindo que todos tenham
+                      acesso a alimentos e a oportunidades para prosperar.
+                  </p>
+               </div>
+            </div>
+            <div class="testimonial-box">
+               <div class="box-top">
+                  <div class="profile">
+                     <div class="profile-img">
+                        <img src="{% static 'img/testemunha-06.jfif' %}" alt="">
+                     </div>
+                     <div class="name-user">
+                        <strong>Alessandra da Silva</strong>
+                        <span>@fernandosoaresweb</span>
+                     </div>
+                  </div>
+                  <div class="reviews">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                  </div>
+               </div>
+               <div class="client-comment">
+                  <p> Unidos, podemos transformar a luta contra a fome em uma realidade, garantindo que todos tenham
+                      acesso a alimentos e a oportunidades para prosperar.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- #FOOTER -->
+      <footer class="footer" style="background-image: url('../IMAGENS/footer-bg.jpg')">
+        <div class="footer-top section">
+           <div class="container">
+              <div class="footer-brand">
+                 <a href="#" class="logo">ALIMENTA AÇÃO</a>
+                 <p class="footer-text">
+                    Se você tiver alguma dúvida, entre em contato conosco em <a href="mailto:support@gmail.com"
+                       class="link">alimentaacao.supote@gmail.com</a>
+                 </p>
+                 <ul class="contact-list">
+                    <li class="contact-item">
+                       <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                       <address class="address">
+                        Jardim Jose Ometto II, Araras - SP, 13606-360
+                       </address>
+                    </li>
+                    <li class="contact-item">
+                       <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                       <a href="tel:+16234567891011" class="contact-link">+55 (19) 3571-1508</a>
+                    </li>
+                    <li class="contact-item">
+                       <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                       <a href="tel:+16234567891011" class="contact-link">+55 (19) 97178-3752</a>
+                    </li>
+                 </ul>
+                 <ul class="social-list">
+                    <li>
+                       <a href="#" class="social-link">
+                          <ion-icon name="logo-facebook"></ion-icon>
+                       </a>
+                    </li>
+                    <li>
+                       <a href="#" class="social-link">
+                          <ion-icon name="logo-twitter"></ion-icon>
+                       </a>
+                    </li>
+                    <li>
+                       <a href="#" class="social-link">
+                          <ion-icon name="logo-pinterest"></ion-icon>
+                       </a>
+                    </li>
+                    <li>
+                       <a href="#" class="social-link">
+                          <ion-icon name="logo-instagram"></ion-icon>
+                       </a>
+                    </li>
+                 </ul>
+              </div>
+              <ul class="footer-list">
+                  <li>
+                     <p class="footer-list-title">Corporação</p>
+                  </li>
+                  <li>
+                     <a href="#" class="footer-link">Careers</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">About Us</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">Contact Us</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">FAQs</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">Vendors</a>
+                  </li>   
+                  <li>
+                     <a href="#" class="footer-link">Affiliate Program</a>
+                  </li>   
+              </ul>
+              <ul class="footer-list">
+                  <li>
+                     <p class="footer-list-title">Serviços</p>
+                  </li>
+                  <li>
+                     <a href="#" class="footer-link">Careers</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">About Us</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">Contact Us</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">FAQs</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">Vendors</a>
+                  </li>   
+                  <li>
+                     <a href="#" class="footer-link">Affiliate Program</a>
+                  </li>   
+              </ul>
+              <ul class="footer-list">
+                  <li>
+                     <p class="footer-list-title">Infomações</p>
+                  </li>
+                  <li>
+                     <a href="#" class="footer-link">Careers</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">About Us</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">Contact Us</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">FAQs</a>
+                  </li>  
+                  <li>
+                     <a href="#" class="footer-link">Vendors</a>
+                  </li>   
+                  <li>
+                     <a href="#" class="footer-link">Affiliate Program</a>
+                  </li>   
+               </ul>
+           </div>
+        </div>
+        <div class="footer-bottom">
+           <div class="container">
+              <p class="copyright">
+                 &copy; 2024 Direitos autorais reservados por <a href="#" class="copyright-link">Alimenta Ação.</a>
+              </p>
+              <img src="{% static 'img/cartoes.png' %}" width="397" height="32" loading="lazy" alt="payment method" class="img">
+           </div>
+        </div>
+     </footer>
+  
+    <!-- #BACK TO TOP -->
+  
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+      <!-- custom js link -->
+      <script src="{% static 'js/index.js' %}"></script>
+      <!-- ionicon link -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   </body>
+</html>

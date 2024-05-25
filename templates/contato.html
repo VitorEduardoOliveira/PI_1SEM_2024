@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Entre em contato</title>
+        <!-- google font link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+        <link
+         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
+         rel="stylesheet">
+         <!-- custom css link -->
+        <link rel="stylesheet" href="{% static 'css/contato.css' %}">
+    </head>
+    <body>
+        <div class="contactUs">
+            <div class="title">
+                <h2>Entre em Contato!</h2>
+            </div>
+            <div class="box">
+                <!--FORM-->
+                <div class="contact form">
+                    <h3>Envie a sua mensagem</h3>
+                    <form>
+                        <div class="formBox">
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>Nome</span>
+                                    <input type="text" placeholder="wesley">
+                                </div>
+                                <div class="inputBox">
+                                    <span>Sobrenome</span>
+                                    <input type="text" placeholder="kilian">
+                                </div>
+                            </div>
+
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>Email</span>
+                                    <input type="text" placeholder="exemplo@gmail.com">
+                                </div>
+                                <div class="inputBox">
+                                    <span>Número de celular</span>
+                                    <input type="text" placeholder="+55 19 98745-4598">
+                                </div>
+                            </div>
+
+                            <div class="row100">
+                                <div class="inputBox">
+                                    <span>Mensagem</span>
+                                    <textarea placeholder="Escreva aqui a sua mensagem...."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row100">
+                                <div class="inputBox">
+                                   <input type="submit" value="Enviar">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!--INFO BOX-->
+                <div class="contact info">
+                    <h3>Nosso Contato</h3>
+                    <div class="infoBox">
+                        <div>
+                            <span><ion-icon name="location" aria-hidden="true"></ion-icon></span>
+                            <p>Jardim Jose Ometto II, Araras - SP, 13606-360, BRASIL</p>
+                        </div>
+
+                        <div>
+                            <span><ion-icon name="mail" aria-hidden="true"></ion-icon></span>
+                            <a href="mailto:nomedawong@gmail.com">alimentaacao@gmail.com</a>
+                        </div>
+
+                        <div>
+                            <span><ion-icon name="call" aria-hidden="true"></ion-icon></span>
+                            <a href="tel:+551935711508">+55 (19) 3571-1508</a>
+                        </div>
+
+                        <!--Social media Links-->
+                        <ul class="sci">
+                            <li><a href="#"><ion-icon name="logo-facebook" aria-hidden="true"></ion-icon></a></li>
+                            <li><a href="#"> <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-twitter" aria-hidden="true"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--MAP-->
+                <div class="contact map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4388.106456517658!2d-47.33614344077964!3d-22.355781421556525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c87088f8596037%3A0xe6300980fc459049!2sFatec%20Araras%20-%20Faculdade%20de%20Tecnologia%20de%20Araras!5e0!3m2!1spt-BR!2sbr!4v1715128677787!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
