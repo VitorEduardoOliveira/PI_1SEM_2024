@@ -9,7 +9,7 @@ class CampanhaRepository:
         pipeline = [
             {
                 "$match": {
-                    "Id": campaign_id
+                    "id": campaign_id
                 }
             },
             {
@@ -45,18 +45,18 @@ class CampanhaRepository:
         result = list(self.collection.aggregate(pipeline))
         return result
 
-    def get_metas_doacoes_por_campanha(self, campanha_id):
+    def get_meta_doacoes_por_campanha(self, campanha_id):
         pipeline = [
             {
                 "$match": {
-                    "Id": campanha_id
+                    "id": campanha_id
                 }
             },
             {
                 "$lookup": {
                     "from": "doacoes",
-                    "localField": "Id",
-                    "foreignField": "Id_campanha",
+                    "localField": "id",
+                    "foreignField": "id_campanha",
                     "as": "doacoes_detalhes"
                 }
             },
@@ -73,7 +73,7 @@ class CampanhaRepository:
             },
             {
                 "$group": {
-                    "_id": "$Id",
+                    "_id": "$id",
                     "titulo": {"$first": "$titulo"},
                     "descricao": {"$first": "$descricao"},
                     "meta": {"$first": "$meta"},
@@ -103,7 +103,7 @@ class CampanhaRepository:
         document = self.collection.find_one(query)
         return document
 
-    def find_many(self, query):
+    def find_many(self, query = ""):
         documents = self.collection.find(query)
         return list(documents)
 

@@ -15,7 +15,7 @@ class ONGRepository:
         document = self.collection.find_one(query)
         return document
 
-    def find_many(self, query):
+    def find_many(self, query = ""):
         documents = self.collection.find(query)
         return list(documents)
 
@@ -34,8 +34,8 @@ class ONGRepository:
         return result.deleted_count
     
     def login(self, cnpj, senha):
-        hashed_password = self.hash_password(senha)
-        query = {"cnpj": cnpj, "senha": hashed_password}
+        hash_senha = self.hash_password(senha)
+        query = {"cnpj": cnpj, "senha": hash_senha}
         user = self.collection.find_one(query)
         return user is not None
     
@@ -67,7 +67,7 @@ class ONGRepository:
                     "enderecos": { "$first": "$endereco" },
                     "email": { "$first": "$email" },
                     "links": { "$first": "$links" },
-                    "campanhas": { "$push": "$campanhas_detalhes.nome" }
+                    "campanhas": { "$push": "$campanhas_detalhes.titulo" }
                 }
             },
             {
