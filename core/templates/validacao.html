@@ -1,92 +1,84 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validação da Doação</title>
-
-     <!-- Custom CSS -->
-     <link rel="stylesheet" href="{% static 'css/validacao.css' %}" />
-</head>
-<body>
-
-    <div class="container">
-        <form id="payment-form">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Validação da Doação</title>
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/validacao.css' %}" />
+   </head>
+   <body>
+      <div class="container">
+         <form id="payment-form">
             <div class="row">
-                <div class="col">
-                    <h3 class="title">Endereço de Cobrança</h3>
-                    <div class="inputBox">
-                        <span>Nome completo:</span>
-                        <input type="text" placeholder="Wesley Gustavo Kilian" id="nome-completo" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>Email:</span>
-                        <input type="email" placeholder="exemplo123@gmail.com" id="email" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>Endereço:</span>
-                        <input type="text" placeholder="número - rua - localidade" id="endereco" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>Cidade:</span>
-                        <input type="text" placeholder="Leme" id="cidade" required>
-                    </div>
-    
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>Estado:</span>
-                            <input type="text" placeholder="São Paulo" id="estado" required>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>CEP:</span>
-                            <input type="text" placeholder="13610-160" id="cep" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <h3 class="title">Pagamento</h3>
-                    <div class="inputBox">
-                        <span>Cartões aceitos:</span>
-                        <img src="{% static 'img/cartoes.png' %}" alt="">
-                    </div>
-                    <div class="inputBox">
-                        <span>Nome no cartão:</span>
-                        <input type="text" placeholder="Wesley G. Kilian" id="nome-cartao" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>Número do cartão de crédito:</span>
-                        <input type="number" placeholder="1111-2222-3333-4444" id="num-cartao" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>Mês de vencim. do cartão:</span>
-                        <input type="text" placeholder="Janeiro" id="mes-venc" required>
-                    </div>
-    
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>Ano de vencim. do cartão:</span>
-                            <input type="number" placeholder="2050" id="ano-venc" required>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>CVV:</span>
-                            <input type="number" placeholder="560" id="cvv" required>
-                        </div>
-                    </div>
-                </div>
+               <div class="col">
+                  <h3 class="title">Endereço de Cobrança</h3>
+                  <div class="inputBox">
+                     <span>Nome completo:</span>
+                     <input type="text" placeholder="Wesley Gustavo Kilian" id="nome-completo" required>
+                  </div>
+                  <div class="inputBox">
+                     <span>Email:</span>
+                     <input type="email" placeholder="exemplo123@gmail.com" id="email" required>
+                  </div>
+                  <div class="inputBox">
+                     <span>Endereço:</span>
+                     <input type="text" placeholder="número - rua - localidade" id="endereco" required>
+                  </div>
+                  <div class="inputBox">
+                     <span>Cidade:</span>
+                     <input type="text" placeholder="Leme" id="cidade" required>
+                  </div>
+                  <div class="flex">
+                     <div class="inputBox">
+                        <span>Estado:</span>
+                        <input type="text" placeholder="São Paulo" id="estado" required>
+                     </div>
+                  </div>
+                  <div class="flex">
+                     <div class="inputBox">
+                        <span>CEP:</span>
+                        <input type="text" placeholder="13610-160" id="cep" required>
+                     </div>
+                  </div>
+               </div>
+               <div class="col">
+                  <h3 class="title">Pagamento</h3>
+                  <div class="inputBox">
+                     <span>Cartões aceitos:</span>
+                     <img src="{% static 'img/cartoes.png' %}" alt="">
+                  </div>
+                  <div class="inputBox">
+                     <span>Nome no cartão:</span>
+                     <input type="text" placeholder="Wesley G. Kilian" id="nome-cartao" required>
+                  </div>
+                  <div class="inputBox">
+                     <span>Número do cartão de crédito:</span>
+                     <input type="number" placeholder="1111-2222-3333-4444" id="num-cartao" required>
+                  </div>
+                  <div class="inputBox">
+                     <span>Mês de vencim. do cartão:</span>
+                     <input type="text" placeholder="Janeiro" id="mes-venc" required>
+                  </div>
+                  <div class="flex">
+                     <div class="inputBox">
+                        <span>Ano de vencim. do cartão:</span>
+                        <input type="number" placeholder="2050" id="ano-venc" required>
+                     </div>
+                  </div>
+                  <div class="flex">
+                     <div class="inputBox">
+                        <span>CVV:</span>
+                        <input type="number" placeholder="560" id="cvv" required>
+                     </div>
+                  </div>
+               </div>
             </div>
             <input type="submit" value="Verificação" class="submit-btn" id="verificacao-btn">
-        </form>
-    </div>
-    
-     <!-- custom js link -->
-	<script src="{% static 'js/validacao.js' %}" defer></script>
-
-</body>
+         </form>
+      </div>
+      <!-- custom js link -->
+      <script src="{% static 'js/validacao.js' %}" defer></script>
+   </body>
 </html>
-
-

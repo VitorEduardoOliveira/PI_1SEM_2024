@@ -10,7 +10,7 @@
         <!-- font awesome cdn -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- custom css -->
-        <link rel = "stylesheet" href = "{% static 'css/doe.css' %}">
+        <link rel="stylesheet" href="{% static 'css/doe.css' %}">
     </head>
     <body>
 
@@ -23,12 +23,14 @@
                 </div>
                 <div class = "header-form">
                     <h2>Preencha os campos para realizar a doação:</h2>
-                    <form class = "flex">
-                        <input type = "text" class = "form-control" placeholder="Nome completo">
-                        <input type="date" class = "form-control" placeholder="Date">
-                        <input type="number" class = "form-control" placeholder="Valor a ser doado R$" onInput="Moeda(event);"/>
-                        <input type="submit" class = "btn" value = "Doar">
+                    <form class="flex">
+                        <input type="text" class="form-control" placeholder="Nome completo">
+                        <input type="date" class="form-control" placeholder="Date">
+                        <input type="text" class="form-control" placeholder="Valor a ser doado R$" onInput="Moeda(event);"/>
+                        <input type="submit" class="btn" value="Doar">
                     </form>
+                    <!-- Botão "Voltar" no canto superior esquerdo -->
+                    <a href="index.html" class="btn" style="position: absolute; top: 20px; left: 20px;">Voltar</a>
                 </div>
             </div>
         </header>
@@ -38,88 +40,99 @@
         <section id = "featured" class = "py-4">
             <div class = "container">
                 <div class = "title-wrap">
-                    <span class = "sm-title">know about some places before your travel</span>
-                    <h2 class = "lg-title">featured places</h2>
+                  <span class="sm-title">Conheça algumas cidades que ajudamos</span>
+                  <h2 class="lg-title">Cidades em destaque</h2>
                 </div>
 
                 <div class = "featured-row">
                     <div class = "featured-item my-2 shadow">
-                        <img src = "{% static 'img/cidade-1.jpg' %}" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Reo De Janeiro, Brazil
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
+                        <img src="{% static 'img/cidade-1.jpg' %}" alt="Cidade em destaque">
+                        <div class="featured-item-content">
+                           <span>
+                           <i class="fas fa-map-marker-alt"></i>
+                           São Paulo, SP
+                           </span>
+                           <div>
+                              <p class="text">Em São Paulo, nossa ONG distribui alimentos e oferece programas 
+                                 de nutrição para famílias em situação de vulnerabilidade.
+                              </p>
+                           </div>
                         </div>
                     </div>
 
                     <div class = "featured-item my-2 shadow">
-                        <img src = "{% static 'img/cidade-2.jpg' %}" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                North Bondi, Australia
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
+                        <img src="{% static 'img/cidade-2.jpg' %}" alt="Cidade em destaque">
+                        <div class="featured-item-content">
+                           <span>
+                           <i class="fas fa-map-marker-alt"></i>
+                           Campinas, SP
+                           </span>
+                           <div>
+                              <p class="text">Em Campinas, promovemos a criação de hortas comunitárias, 
+                                 incentivando <br> a autossuficiência alimentar.
+                              </p>
+                           </div>
                         </div>
                     </div>
 
                     <div class = "featured-item my-2 shadow">
-                        <img src = "{% static 'img/cidade-3.jpg' %}" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Berlin, Germany
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
+                        <img src="{% static 'img/cidade-3.webp' %}" alt="Cidade em destaque">
+                        <div class="featured-item-content">
+                           <span>
+                           <i class="fas fa-map-marker-alt"></i>
+                           Santos, SP
+                           </span>
+                           <div>
+                              <p class="text">Em Santos, trabalhamos com ONGs locais para desenvolver projetos
+                                 de combate à fome.
+                              </p>
+                           </div>
                         </div>
                     </div>
 
                     <div class = "featured-item my-2 shadow">
-                        <img src = "{% static 'img/cidade-4.jpg' %}" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Khwaeng wat arun, thailand
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
+                        <img src="{% static 'img/cidade-4.jpg' %}" alt="Cidade em destaque">
+                        <div class="featured-item-content">
+                           <span>
+                           <i class="fas fa-map-marker-alt"></i>
+                           Sorocaba, SP
+                           </span>
+                           <div>
+                              <p class="text">Em Sorocaba, nossa ONG oferece programas de nutrição e educação
+                                 alimentar para crianças e adolescentes.
+                              </p>
+                           </div>
                         </div>
                     </div>
 
                     <div class = "featured-item my-2 shadow">
-                        <img src = "{% static 'img/cidade-5.jpg' %}" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                Rome, Italy
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
+                     <img src="{% static 'img/cidade-5.jpg' %}" alt="Cidade em destaque">
+                        <div class="featured-item-content">
+                           <span>
+                           <i class="fas fa-map-marker-alt"></i>
+                           Ribeirão Preto, SP
+                           </span>
+                           <div>
+                              <p class="text">Em Ribeirão Preto, realizamos campanhas de arrecadação de 
+                                 alimentos e distribuição para famílias carentes.
+                              </p>
+                           </div>
                         </div>
                     </div>
 
                     <div class = "featured-item my-2 shadow">
-                        <img src = "{% static 'img/cidade-6.jpg' %}" alt = "featured place">
-                        <div class = "featured-item-content">
-                            <span>
-                                <i class = "fas fa-map-marker-alt"></i>
-                                fuvahmulah, maldives
-                            </span>
-                            <div>
-                                <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta sed dignissimos libero soluta illum, harum amet excepturi sit?</p>
-                            </div>
+                     <img src="{% static 'img/cidade-6.jpg' %}" alt="Cidade em destaque">
+                     <div class="featured-item-content">
+                        <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Bauru, SP
+                        </span>
+                        <div>
+                           <p class="text">Em Bauru, promovemos oficinas de nutrição e hábitos alimentares <br> 
+                              saudáveis para a comunidade.
+                           </p>
                         </div>
-                    </div>
+                     </div>
                 </div>
             </div>
         </section>
@@ -177,7 +190,7 @@
                     <div class = "test-item">
                         <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda blanditiis, asperiores, velit iste eos officiis tempora magni quaerat quo consectetur expedita cum recusandae facere nam voluptate minus iusto eum. Delectus!</p>
                         <div class = "test-item-info">
-                            <img src = "{% static 'img/testemunha-01.jpg' %}" alt = "testimonial">
+                            <img src = "../IMAGENS/testemunha-02.jpg" alt = "testimonial">
                             <div>
                                 <h3>Kevin Wilson</h3>
                                 <p class = "text">Trip to Brazil</p>
@@ -188,7 +201,7 @@
                     <div class = "test-item">
                         <p class = "text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ut dolores tenetur harum deserunt. Maxime tenetur consectetur recusandae nobis fugit iusto natus quibusdam nulla!</p>
                         <div class = "test-item-info">
-                            <img src = "{% static 'img/testemunha-02.jpg' %}" alt = "testimonial">
+                            <img src = "../IMAGENS/testemunha-02.jpg" alt = "testimonial">
                             <div>
                                 <h3>Ben Davis</h3>
                                 <p class = "text">Trip to Maldives</p>
@@ -199,7 +212,7 @@
                     <div class = "test-item">
                         <p class = "text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem sapiente amet expedita quae autem deleniti quo magni numquam facilis soluta dicta, praesentium ipsum, quos optio sed quibusdam! Reprehenderit recusandae provident id nemo!</p>
                         <div class = "test-item-info">
-                            <img src = "{% static 'img/testemunha-02.jpg' %}" alt = "testimonial">
+                            <img src = "../IMAGENS/testemunha-02.jpg" alt = "testimonial">
                             <div>
                                 <h3>Jaura Jones</h3>
                                 <p class = "text">Trip to Thailand</p>
@@ -225,7 +238,8 @@
         <!-- end of video section -->
 
         <!-- js -->
-        <script src = "{% static 'js/doe.js' %}"></script>
+        <script src="{% static 'js/doe.js' %}"></script>
+        <script src="{% static 'js/index.js' %}"></script>
         <script>
             // play/pause video
             let video = document.querySelector('.video-wrapper video');

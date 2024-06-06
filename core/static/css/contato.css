@@ -3,12 +3,29 @@
     * colors
     */
     --eerie-black-1: hsl(0, 0%, 20%); 
+    --eerie-black-2: hsl(0, 0%, 15%);
+    --eerie-black-3: hsl(228, 10%, 10%);
+    --raisin-black: hsl(228, 6%, 17%);
     --pistachio:   #FC8500;
 }
 
 ::-webkit-scrollbar { width: 13px; }
 ::-webkit-scrollbar-track { background-color: hsl(0, 0%, 95%); }
 ::-webkit-scrollbar-thumb { background-color: var(--pistachio); }
+
+
+/*-----------------------------------*\
+#HEADER
+\*-----------------------------------*/
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: var(--eerie-black-1)!important;
+padding-block: 18px;
+z-index: 4;
+}
 
 /*-----------------------------------*\
 #CONTATO
@@ -23,14 +40,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: var(--eerie-black-1);
+h2{
+    margin-top: 80px;
 }
 
 .contactUs{
     position: relative;
     width: 100%;
-    padding: 40px 100px;
+    padding: 100px 100px;
 }
 
 .contactUs .title{
@@ -41,7 +58,7 @@ body {
 }
 
 .contactUs .title h2{
-    color: #fff;
+    color: #0e3959;
     font-weight: 500;
 }
 
@@ -59,7 +76,7 @@ body {
 
 .contact{
     padding: 40px;
-    background: #fff;
+    background: #242323;
     box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
 }
 
@@ -76,7 +93,7 @@ body {
 }
 
 .contact h3{
-    color: #0e3959;
+    color:white;
     font-weight: 500;
     font-size: 1.4em;
     margin-bottom: 10px;
@@ -131,6 +148,18 @@ body {
     margin-bottom: 10px;
 }
 
+.inputBox input,
+.inputBox textarea {
+    color: white; /* Cor do texto */
+    background-color: transparent; /* Transparente para manter o fundo escuro */
+}
+
+.inputBox input:focus,
+.inputBox textarea:focus {
+    color: white; /* Cor do texto durante o foco */
+}
+
+
 .inputBox input[type="submit"]{
     background: #4CAF50;
     color: #fff;
@@ -160,10 +189,10 @@ body {
 
 @keyframes focusAnimation {
     from {
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 0 white;
     }
     to {
-        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px 2px white;
     }
 }
 
@@ -236,7 +265,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
 
 /*-----------------------------------*\
 #RESPONSIVE

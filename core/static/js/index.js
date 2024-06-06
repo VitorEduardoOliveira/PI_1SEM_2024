@@ -207,3 +207,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+function toggleCard(cardId) {
+  var card = document.getElementById(cardId);
+  var shortText = card.querySelector('.card-text-short');
+  var fullText = card.querySelector('.card-text-full');
+
+  if (shortText.style.display === 'none') {
+     shortText.style.display = 'block';
+     fullText.style.display = 'none';
+  } else {
+     shortText.style.display = 'none';
+     fullText.style.display = 'block';
+  }
+}

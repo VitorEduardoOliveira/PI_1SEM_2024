@@ -24,6 +24,11 @@ def contato(request):
     return render(request, "contato.html")
   return HttpResponseRedirect(reverse('core:contato'))
 
+def avaliacao(request):
+  if request.method == "GET":
+    return render(request, "avaliacao.html")
+  return HttpResponseRedirect(reverse('core:avaliacao'))
+
 def loginONG(request):
   if request.method == "POST":
     form = ONGForm(request.POST)

@@ -1,6 +1,6 @@
 from core.services.MongoService import MongoService
 
-class MongoRepository:
+class DoacaoRepository:
     def __init__(self, mongo_service: MongoService):
         self.db = mongo_service.db
         self.collection = self.db["doacoes"]
@@ -33,7 +33,7 @@ class MongoRepository:
         result = list(self.collection.aggregate(pipeline))
         return result
     
-    def get_total_alimentos(self, alimento):
+    def get_total_alimentos(self, alimento): 
         pipeline = [
             {
                 "$match": {
@@ -56,24 +56,6 @@ class MongoRepository:
         if result:
             return result[0]["totalQuantidade"]
         return 0
-    
-    def get_alimentos_doados_por_campanha(self, id_campanha):
-        pipeline = [
-            {
-                "$match": {
-                    "id_campanha": id_campanha,
-                    "alimento": {"$ne": None}
-                }
-            },
-            {
-                "$group": {
-                    "_id": "$alimento",
-                    "totalQuantidade": {"$sum": "$qtde"}
-                }
-            }
-        ]
-        result = list(self.collection.aggregate(pipeline))
-        return result
     
     def get_doacoes_alimento_por_campanha(self, id_campanha):
         pipeline = [
@@ -123,7 +105,7 @@ class MongoRepository:
         document = self.collection.find_one(query)
         return document
 
-    def find_many(self, query):
+    def find_many(self, query = ""):
         documents = self.collection.find(query)
         return list(documents)
 

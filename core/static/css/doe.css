@@ -1,3 +1,4 @@
+
 html, body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -65,6 +66,7 @@ button, input[type = "submit"]{
     -webkit-transition: var(--trans);
     -o-transition: var(--trans);
     transition: var(--trans);
+    background-color: #fc7100;
 }
 
 /* css stop transition and animation */
@@ -113,23 +115,22 @@ img{
 }
 
 :root{
-    --green: #1ec6b6;
+    --green:  #FC8500;;
     --light-grey: #f7f7f7;
     --dark: #0e1010;
     --trans: all 0.3s ease-in-out;
+    --eerie-black-1: hsl(0, 0%, 13%);
 }
 
 /* header */
 header{
     min-height: 100vh;
     padding-top: 7rem;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../IMAGENS/ong-1.jpg) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../IMAGENS/ong-1.jpg) center/cover no-repeat;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../IMAGENS/ong-1.jpg) center/cover no-repeat;
+    background-color: var( --eerie-black-1);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     color: #fff;
     text-align: center;
 }
@@ -373,9 +374,8 @@ header{
 
 /* services */
 #services{
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/services-bg.jpg) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../IMAGENS/testemunha-02.jpg) center/cover no-repeat;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../IMAGENS/testemunha-02.jpg) center/cover no-repeat;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/testemunha-02.jpg) center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/testemunha-02.jpg) center/cover no-repeat;
 }
 #services *{
     color: #fff;
