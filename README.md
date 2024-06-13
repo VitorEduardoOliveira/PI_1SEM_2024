@@ -29,5 +29,5 @@ src="https://www.svgrepo.com/show/312259/github.svg"/>
 ## Integrantes do Projeto
 - [Thiago Cesar Alvarez ](https://github.com/Alvarez-T)
 - [Vitor Eduardo de Oliveira](https://github.com/VitorEduardoOliveira)
-- [Vitor Eduardo de Oliveira](https://github.com/WesleyGustavoKilian)
-- [Vitor Eduardo de Oliveira](https://github.com/William-Fonseca-Geralde)
+- [Wesley Gustavo Kilian](https://github.com/WesleyGustavoKilian)
+- [William Fonseca Geralde](https://github.com/William-Fonseca-Geralde)
