@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido com as seguintes ferramentas:
 
 
 ## Documentos
-
+[Documentação](https://github.com/VitorEduardoOliveira/PI_1SEM_2024/tree/main/Documenta%C3%A7%C3%A3o/Documentação_P.I_1_SEM_2024.pdf)
 
 ## Integrantes do Projeto
 - [Miran Romeiro](https://github.com/miranromeiro)
