@@ -23,6 +23,7 @@ Esse projeto foi desenvolvido com as seguintes ferramentas:
 
 
 ## Integrantes do Projeto
+- [Miran Romeiro](https://github.com/miranromeiro)
 - [Thiago Cesar Alvarez ](https://github.com/Alvarez-T)
 - [Vitor Eduardo de Oliveira](https://github.com/VitorEduardoOliveira)
 - [Wesley Gustavo Kilian](https://github.com/WesleyGustavoKilian)
