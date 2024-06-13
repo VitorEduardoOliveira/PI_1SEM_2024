@@ -1,0 +1,6 @@
+_id,id,titulo,descricao,data_inicio,data_fim,status,meta,comentarios[0].usuario,comentarios[0].comentario,locais_arrecadacao[0].endereco,locais_arrecadacao[0].horario_inicio,locais_arrecadacao[0].horario_termino,cnpj_ong
+66648a780fe9353b684f0fe3,1,Campanha 1,Descrição da Campanha 1,2023-01-01,2023-12-31,Ativa,1000,User 1,Comentário 1,Local 1,08:00,18:00,12.345.678/0001-99
+66648a780fe9353b684f0fe4,2,Campanha 2,Descrição da Campanha 2,2023-02-01,2023-11-30,Ativa,2000,User 2,Comentário 2,Local 2,09:00,17:00,98.765.432/0001-55
+66648a780fe9353b684f0fe5,3,Campanha 3,Descrição da Campanha 3,2023-03-01,2023-10-31,Concluída,1500,User 3,Comentário 3,Local 3,10:00,16:00,23.456.789/0001-01
+66648a780fe9353b684f0fe6,4,Campanha 4,Descrição da Campanha 4,2023-04-01,2023-09-30,Ativa,3000,User 4,Comentário 4,Local 4,07:00,19:00,34.567.890/0001-12
+66648a780fe9353b684f0fe7,5,Campanha 5,Descrição da Campanha 5,2023-05-01,2023-08-31,Ativa,2500,User 5,Comentário 5,Local 5,08:30,17:30,45.678.901/0001-23
