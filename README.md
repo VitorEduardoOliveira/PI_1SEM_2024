@@ -1,10 +1,10 @@
 # Alimenta Ação
 
 
-Projeto Integrador do 3º semestre da FATEC Araras | Tema: Doação
+Projeto Integrador do 3º semestre da FATEC Araras
 
 # Objetivo 
-O projeto consiste no desenvolvimento de um site de doação para ONGs, onde o usuario acessará e terá contato com as ONGs cadastradas e poderá ajudar doando quantias monetárias.
+O projeto consiste no desenvolvimento de um site de doação para Instituições, onde o usuario acessará e terá contato com as ONGs cadastradas e poderá ajudar doando quantias monetárias.
 
 ## Tecnologias utilizadas
 
