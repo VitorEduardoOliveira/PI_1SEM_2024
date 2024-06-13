@@ -50,7 +50,8 @@ activate.bat
 cd ..
 cd ..
 pip install -r requirements.txt
-cd arrecadacoes/
+cd Alimenta-Ação/
+cd Projeto_AlimentaAcao/
 python manage.py migrate
 python manage.py test
 pip install coverage
