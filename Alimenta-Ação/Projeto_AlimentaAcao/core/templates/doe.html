@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nome da ong</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- custom css -->
+        <link rel="stylesheet" href="{% static 'css/doe.css' %}">
+    </head>
+    <body>
+
+        <!-- header -->
+        <header class = "flex">
+            <div class = "container">
+                <div class = "header-title">
+                    <h1>{{ titulo }}</h1>
+                    <p>{{ descricao }}</p>
+                </div>
+                <div class = "header-form">
+                    <h2>Preencha os campos para realizar a doação:</h2>
+                    <form class="flex" method="POST">
+                        {% csrf_token %}
+                        <input type="text" class="form-control" name="Nome" placeholder="Nome completo">
+                        <input type="date" class="form-control" name="Data">
+                        <input type="text" class="form-control" name="Valor" placeholder="Valor a ser doado R$"/>
+                        <input type="submit" class="btn" value="Doar">
+                    </form>
+                    <!-- Botão "Voltar" no canto superior esquerdo -->
+                    <a href="{% url 'core:index' %}" class="btn" style="position: absolute; top: 20px; left: 20px;">Voltar</a>
+                </div>
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- featured section -->
+        <section id = "featured" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                  <span class="sm-title">Conheça algumas cidades que ajudamos</span>
+                  <h2 class="lg-title">Cidades em destaque</h2>
+                </div>
+
+                <div class = "featured-row">
+                    {% for local in locais %}
+                        <div class = "featured-item my-2 shadow">
+                            <img src="{% static 'img/cidade-1.jpg' %}" alt="Cidade em destaque">
+                            <div class="featured-item-content">
+                            <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            {{ local }}
+                            </span>
+                            <div>
+                                <p class="text">Nossa ONG distribui alimentos e oferece programas 
+                                    de nutrição para <br>
+                                    famílias em situação de vulnerabilidade.
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- end of featured section -->
+
+        <!-- services section -->
+        <section id="services" class="py-4">
+            <div class="container">
+                <div class="title-wrap">
+                    <span class="sm-title">Saiba sobre os serviços que oferecemos</span>
+                    <h2 class="lg-title">Nossos serviços</h2>
+                </div>
+
+                <div class="services-row">
+                    <div class="services-item">
+                        <span class="services-icon">
+                            <i class="fas fa-utensils"></i>
+                        </span>
+                        <h3>Distribuição de Alimentos</h3>
+                        <p class="text">Fornecemos refeições nutritivas para comunidades carentes, garantindo que todos tenham acesso a alimentos saudáveis diariamente.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+
+                    <div class="services-item">
+                        <span class="services-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </span>
+                        <h3>Educação Nutricional</h3>
+                        <p class="text">Oferecemos programas educativos para ensinar sobre a importância de uma dieta balanceada e como preparar refeições nutritivas com recursos limitados.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+
+                    <div class="services-item">
+                        <span class="services-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </span>
+                        <h3>Apoio a Agricultores Locais</h3>
+                        <p class="text">Apoiamos agricultores locais com recursos e treinamento para aumentar a produção sustentável de alimentos e melhorar a segurança alimentar na região.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+
+                    <div class="services-item">
+                        <span class="services-icon">
+                            <i class="fas fa-seedling"></i>
+                        </span>
+                        <h3>Hortas Comunitárias</h3>
+                        <p class="text">Desenvolvemos hortas comunitárias para fornecer alimentos frescos e promover a autossuficiência nas comunidades.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of services section -->
+
+
+        <!-- js -->
+        <script src="{% static 'js/doe.js' %}"></script>
+        <script src="{% static 'js/index.js' %}"></script>
+        <script>
+            const Moeda = (event) => {
+                const onlyDigits = event.target.value
+                .split("")
+                .filter(s => /\d/.test(s))
+                .join("")
+                .padStart(3, "0")
+                const digitsFloat = onlyDigits.slice(0, -2) + "." + onlyDigits.slice(-2)
+                event.target.value = maskCurrency(digitsFloat)
+            }
+            
+            const maskCurrency = (valor, locale = 'pt-BR', currency = 'BRL') => {
+                return new Intl.NumberFormat(locale, {
+                    style: 'currency',
+                    currency
+                }).format(valor)
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+/*-----------------------------------*\
+  #HEADER
+  \*-----------------------------------*/
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 13%) !important;
+    padding-block: 18px;
+    z-index: 4;
+    }

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="{% static 'css/publicarong.css' %}">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Publicar</title>
+</head>
+<body>
+    <div class="top-buttons">
+        <button class="voltarBtn" onclick="window.location.href = '{% url 'core:index' %}';">Voltar</button>
+    </div>    
+    <div class="forms">
+        <header>Tela de Publicação</header>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form primeira">
+                <div class="detalhes pessoal">
+                    <span class="titulo">Detalhes de sua ong</span>
+                    <div class="campos">
+                        <div class="campo-de-entrada">
+                            <label>Nome da Campanha</label>
+                            <input type="text" placeholder="Adicione aqui o nome da campanha" name="Nome" required>
+                        </div>
+                        <div class="campo-de-entrada">
+                            <label>Meta de arrecadação</label>
+                            <input type="text" placeholder="R$ 5.600,50" name="Meta" required>
+                        </div>
+                        <div class="campo-de-entrada">
+                            <label>Email</label>
+                            <input type="text" placeholder="Adicione o email aqui" name="Email" value="{{ email }}" required>
+                        </div>
+                        <div class="campo-de-entrada">
+                            <label>Número de telefone</label>
+                            <input type="text" placeholder="Adicione o número de telefone" name="Telefone" value="{{ telefone }}" required>
+                        </div>
+                        <div class="campo-de-entrada">
+                            <label>Data de Expiração</label>
+                            <input type="date" name="DataExpiracao" required>
+                        </div>
+                        <div class="campo-de-entrada">
+                            <label>Locais de Ajuda</label>
+                            <input type="text" placeholder="Insira os locais e separa com vírgula" name="Locais" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="detalhes ID">
+                    <div class="campos">
+                        <div class="campo-de-entrada campo-mensagem">
+                            <label>Mensagem</label>
+                            <textarea placeholder="Escreva uma mensagem sobre a sua doação" rows="7" name="Mensagem" required></textarea>
+                        </div>                        
+                    </div>
+                    <button type="submit" class="botaoProximo">
+                        <span class="textoDoBotao">Públicar</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>                
+            </div>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
